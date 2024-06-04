@@ -69,6 +69,8 @@ module.exports = {
      port: 7545,            // Standard Ethereum port (default: none)
      network_id: "*",       // Any network (default: none)
     },
+    contracts_directory: './contracts',  // This is the default, ensure it's correct
+    contracts_build_directory: './build/contracts',
     //
     // An additional network, but with some advanced options…
     // advanced: {
