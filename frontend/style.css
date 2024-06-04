@@ -1,38 +1,54 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: url('https://example.com/healthcare-blockchain-bg.jpg') no-repeat center center fixed; /* Replace with an actual URL of a healthcare blockchain background image */
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    color: #333;
 }
 
 .container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
+    max-width: 600px;
+    width: 100%;
 }
 
 h1 {
+    color: #007BFF;
     margin-bottom: 20px;
+    font-size: 2em;
+}
+
+p {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.2em;
 }
 
 input[type="file"] {
     display: block;
     margin: 20px auto;
+    padding: 10px;
+    font-size: 1em;
 }
 
 button {
-    margin: 10px;
-    padding: 10px 20px;
+    margin: 20px 10px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     background-color: #007BFF;
     color: white;
+    font-size: 1em;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -40,5 +56,7 @@ button:hover {
 }
 
 #fileOutput {
-    margin-top: 20px;
+    margin-top: 30px;
+    color: #333;
+    font-size: 1em;
 }

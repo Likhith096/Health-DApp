@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health DApp - Prescription Sent</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prescription Sent to Patient</h1>
+        <p>The doctor has sent the following prescription to the patient:</p>
+        <div id="fileOutput"></div>
+    </div>
+    <script>
+        // Extract query parameters from the URL
+        const params = new URLSearchParams(window.location.search);
+        const ipfsHash = params.get('file');
+        const filename = params.get('filename');
+
+        if (ipfsHash && filename) {
+            const fileOutput = document.getElementById('fileOutput');
+            const fileLink = document.createElement('a');
+            fileLink.href = `https://ipfs.infura.io/ipfs/${ipfsHash}`;
+            fileLink.textContent = filename;
+            fileLink.target = '_blank';
+            fileOutput.appendChild(fileLink);
+        } else {
+            document.getElementById('fileOutput').textContent = 'File uploaded to IPFS.';
+        }
+    </script>
+</body>
+</html>
